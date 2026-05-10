@@ -101,6 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('libras-overlay');
     const videoWrap = document.querySelector('.libras-video-wrap');
 
+    if (video) {
+        video.addEventListener('error', (e) => {
+            console.error("Erro ao carregar o vídeo de Libras:", video.error);
+        });
+    }
+
+    /* Logging for logos */
+    document.querySelectorAll('.logo-item img').forEach(img => {
+        img.addEventListener('error', () => {
+            console.error(`Erro ao carregar logo: ${img.src}`);
+        });
+    });
+
     function toggleVideo() {
       if (video.paused) {
         video.play();
