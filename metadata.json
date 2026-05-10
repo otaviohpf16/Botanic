@@ -1,0 +1,8 @@
+{
+  "name": "Mangabeira AR",
+  "description": "Informações interativas sobre a Mangabeira com Realidade Aumentada, Audiodescrição e Libras.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}

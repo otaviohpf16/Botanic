@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="theme-color" content="#233D1D" />
+  <meta name="theme-color" content="#121F0D" />
   <title>Mangabeira — Hancornia speciosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <!-- Model Viewer for AR/3D -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -14,13 +17,13 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 1 — TOPO / HERO
      ════════════════════════════════════════════════ -->
-<section class="hero">
-  <p class="hero-title">Mangabeira</p>
+<header class="hero" id="hero">
+  <h1 class="hero-title">Mangabeira</h1>
   <p class="hero-species">Hancornia speciosa</p>
-  <p class="hero-family">Apocynaceae</p>
-
+  <p class="hero-family">APOCYNACEAE</p>
+  
   <div class="hero-plant-wrap">
-    <div class="hero-plant-ring"></div>
+    <div class="hero-plant-ring" aria-hidden="true"></div>
     <img
       class="hero-plant-img"
       src="assets/plant.png"
@@ -29,73 +32,63 @@
     />
   </div>
 
-  <!-- Curiosity box — tap interaction only, no navigation -->
-  <div class="hero-curiosity" role="text" aria-label="Curiosidade">
+  <div class="hero-curiosity" role="note" id="curiosity-box">
     <p>A árvore que deu nome a parques, municípios e estradas em todo Brasil.</p>
   </div>
-</section>
+</header>
 
 
 <!-- ════════════════════════════════════════════════
      SEÇÃO 2 — FICHA DA PLANTA
      ════════════════════════════════════════════════ -->
-<section class="ficha">
+<section class="ficha" id="ficha-planta">
 
   <div class="ficha-divider">
-    <span>Ficha da Planta</span>
+    <span>FICHA DA PLANTA</span>
   </div>
 
   <!-- Card 1: De onde vem? -->
-  <div class="ficha-card" role="article">
-    <div class="ficha-card-icon" aria-hidden="true">
-      <!-- location pin icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-      </svg>
+  <div class="ficha-card" role="article" id="card-origem">
+    <div class="ficha-card-icon pin-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
     </div>
-    <p class="ficha-card-title">De onde vem?</p>
-    <p class="ficha-card-text">Nasceu no Cerrado e na Restinga brasileira — não existe naturalmente em nenhum outro lugar no mundo.</p>
+    <div class="ficha-card-content">
+      <p class="ficha-card-title">De onde vem?</p>
+      <p class="ficha-card-text">Nasceu no Cerrado e na Restinga brasileira — não existe naturalmente em nenhum outro lugar no mundo.</p>
+    </div>
   </div>
 
   <!-- Card 2: Um pouco de história -->
-  <div class="ficha-card" role="article">
-    <div class="ficha-card-icon" aria-hidden="true">
-      <!-- droplet / latex icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C12 2 5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-7-13-7-13zm0 18a5 5 0 0 1-5-5c0-2.8 3-8 5-11 2 3 5 8.2 5 11a5 5 0 0 1-5 5z"/>
-      </svg>
+  <div class="ficha-card" role="article" id="card-historia">
+    <div class="ficha-card-icon water-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
     </div>
-    <p class="ficha-card-title">Um pouco de história</p>
-    <p class="ficha-card-text">Se cortar qualquer parte dela, sai látex branco. Esse leite vegetal foi usado por indígenas para fazer botas, impermeabilizar canoas e curar feridas.</p>
+    <div class="ficha-card-content">
+      <p class="ficha-card-title">Um pouco de história</p>
+      <p class="ficha-card-text">Se cortar qualquer parte dela, sai látex branco. Esse leite vegetal foi usado por indígenas para fazer botas, impermeabilizar canoas e curar feridas.</p>
+    </div>
   </div>
 
   <!-- Card 3: Quem depende dela? -->
-  <div class="ficha-card" role="article">
-    <div class="ficha-card-icon" aria-hidden="true">
-      <!-- paw / animal icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="6.5" cy="9" r="1.5"/>
-        <circle cx="10" cy="6" r="1.5"/>
-        <circle cx="14" cy="6" r="1.5"/>
-        <circle cx="17.5" cy="9" r="1.5"/>
-        <path d="M12 10c-3.5 0-6 2-6 5s2.5 5 6 5 6-2 6-5-2.5-5-6-5z"/>
-      </svg>
+  <div class="ficha-card" role="article" id="card-dependencia">
+    <div class="ficha-card-icon bat-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.2 0-2 .8-2 2s.8 2 2 2 2-.8 2-2-.8-2-2-2z"></path><path d="M12 21c-4.4 0-8-1.8-8-4 0-1.2.9-2.3 2.5-3.1C5 12.8 4 11.5 4 10c0-2.2 3.6-4 8-4s8 1.8 8 4c0 1.5-1 2.8-2.5 3.9 1.6.8 2.5 1.9 2.5 3.1 0 2.2-3.6 4-8 4z"></path></svg>
     </div>
-    <p class="ficha-card-title">Quem depende dela?</p>
-    <p class="ficha-card-text">Aves, morcegos, quatis e cutias comem a mangaba. Eles também auxiliam em espalhar as sementes da planta.</p>
+    <div class="ficha-card-content">
+      <p class="ficha-card-title">Quem depende dela?</p>
+      <p class="ficha-card-text">Aves, morcegos, quatis e cutias comem a mangaba. Eles também auxiliam em espalhar as sementes da planta.</p>
+    </div>
   </div>
 
   <!-- Card 4: O fruto -->
-  <div class="ficha-card" role="article">
-    <div class="ficha-card-icon" aria-hidden="true">
-      <!-- fruit icon -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 3c0 0-1-2 2-2s3 2 3 2-1.5.5-2.5 0c1 2 1.5 4 1 6-1.5-1-3-1.5-3.5-6z"/>
-        <path d="M12 8a6 6 0 1 0 0 12A6 6 0 0 0 12 8zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-      </svg>
+  <div class="ficha-card" role="article" id="card-fruto">
+    <div class="ficha-card-icon fruit-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 5V3"></path><path d="M15 4c-1-1-3-1-3 2"></path></svg>
     </div>
-    <p class="ficha-card-title">O fruto</p>
-    <p class="ficha-card-text">Amarelado, mole e perfumado. A mangaba vira sorvete, suco e licor. Sustenta comunidades inteiras no Nordeste que vivem só da coleta. As catadoras de mangaba são patrimônio cultural reconhecido.</p>
+    <div class="ficha-card-content">
+      <p class="ficha-card-title">O fruto</p>
+      <p class="ficha-card-text">Amarelado, mole e perfumado. A mangaba vira sorvete, suco e licor. Sustenta comunidades inteiras no Nordeste que vivem só da coleta. As catadoras de mangaba são patrimônio cultural reconhecido.</p>
+    </div>
   </div>
 
 </section>
@@ -104,17 +97,12 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 3 — REALIDADE AUMENTADA
      ════════════════════════════════════════════════ -->
-<section class="ar-section">
+<section class="ar-section" id="realidade-aumentada">
   <button class="ar-btn" id="ar-btn" aria-label="Ver o fruto em realidade aumentada">
     <span class="ar-btn-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 8.5V4a2 2 0 0 1 2-2h4.5M21.5 4V2.5H16M2 15.5V20a2 2 0 0 0 2 2h4.5M16 21.5V22h5.5v-5.5" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-        <path d="M12 7L8 9.5v5L12 17l4-2.5v-5L12 7z" fill="rgba(255,255,255,0.9)"/>
-        <line x1="12" y1="7" x2="12" y2="17" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
-        <line x1="8" y1="9.5" x2="16" y2="14.5" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8V6a2 2 0 0 1 2-2h2"></path><path d="M2 16v2a2 2 0 0 0 2 2h2"></path><path d="M18 4h2a2 2 0 0 1 2 2v2"></path><path d="M18 20h2a2 2 0 0 0 2-2v-2"></path><rect x="7" y="7" width="10" height="10" rx="2"></rect></svg>
     </span>
-    <span class="ar-btn-text">Veja o fruto em<br>Realidade Aumentada</span>
+    <span class="ar-btn-text">VEJA O FRUTO EM<br>REALIDADE AUMENTADA.</span>
   </button>
 </section>
 
@@ -129,7 +117,6 @@
       camera-controls
       auto-rotate
       auto-rotate-delay="500"
-      rotation-per-second="30deg"
       shadow-intensity="1"
       exposure="1.1"
       alt="Fruto da mangabeira em 3D"
@@ -142,162 +129,10 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 4 — A PLANTA PELO BRASIL
      ════════════════════════════════════════════════ -->
-<section class="mapa-section">
-  <div class="section-header" role="heading" aria-level="2">A Planta pelo Brasil</div>
-  <div class="mapa-wrap" aria-label="Mapa do Brasil mostrando a distribuição da mangabeira no Cerrado e na Restinga">
-    <!-- Simplified Brazil SVG map with push pin markers -->
-    <svg
-      viewBox="0 0 290 320"
-      xmlns="http://www.w3.org/2000/svg"
-      width="270"
-      height="298"
-      aria-hidden="true"
-    >
-      <!-- Brazil outline fill -->
-      <path
-        d="
-          M 88 14
-          L 110 10
-          L 132 12
-          L 158 15
-          L 170 20
-          L 185 28
-          L 196 38
-          L 202 50
-          L 208 58
-          L 218 65
-          L 228 72
-          L 240 80
-          L 248 90
-          L 255 103
-          L 252 114
-          L 246 122
-          L 240 132
-          L 232 142
-          L 226 155
-          L 222 168
-          L 218 180
-          L 216 190
-          L 212 202
-          L 207 212
-          L 202 222
-          L 196 233
-          L 190 244
-          L 184 258
-          L 180 268
-          L 175 280
-          L 168 288
-          L 162 282
-          L 155 274
-          L 148 268
-          L 138 264
-          L 130 258
-          L 120 252
-          L 108 248
-          L 95 244
-          L 85 240
-          L 72 232
-          L 58 222
-          L 48 215
-          L 40 205
-          L 36 192
-          L 35 178
-          L 38 165
-          L 35 152
-          L 30 140
-          L 28 128
-          L 30 115
-          L 36 105
-          L 40 95
-          L 42 82
-          L 46 70
-          L 52 60
-          L 58 50
-          L 62 40
-          L 68 32
-          L 78 22
-          Z
-        "
-        fill="rgba(80,140,60,0.25)"
-        stroke="rgba(100,160,75,0.55)"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
-
-      <!-- Push pin markers — Cerrado (central) and Restinga (coast) -->
-      <!-- Northeast coast — Restinga -->
-      <g transform="translate(243,83)">
-        <circle cx="7" cy="7" r="7" fill="#C87A35" opacity="0.9"/>
-        <circle cx="7" cy="7" r="4" fill="#E8A050"/>
-      </g>
-      <g transform="translate(247,95)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(240,108)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(233,125)">
-        <circle cx="7" cy="7" r="7" fill="#C87A35" opacity="0.9"/>
-        <circle cx="7" cy="7" r="4" fill="#E8A050"/>
-      </g>
-      <g transform="translate(222,140)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(215,158)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(210,178)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <!-- Maranhão / Piauí coast -->
-      <g transform="translate(200,52)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(212,60)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <!-- Cerrado — Central Brazil -->
-      <g transform="translate(140,150)">
-        <circle cx="7" cy="7" r="7" fill="#C87A35" opacity="0.9"/>
-        <circle cx="7" cy="7" r="4" fill="#E8A050"/>
-      </g>
-      <g transform="translate(125,165)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(155,170)">
-        <circle cx="7" cy="7" r="7" fill="#C87A35" opacity="0.9"/>
-        <circle cx="7" cy="7" r="4" fill="#E8A050"/>
-      </g>
-      <g transform="translate(110,140)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(165,135)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(140,120)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <!-- Southeast coast — Restinga -->
-      <g transform="translate(203,202)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-      <g transform="translate(195,215)">
-        <circle cx="7" cy="7" r="6" fill="#C87A35" opacity="0.85"/>
-        <circle cx="7" cy="7" r="3.5" fill="#E8A050"/>
-      </g>
-    </svg>
+<section class="mapa-section" id="mapa-distribuicao">
+  <div class="section-header" role="heading" aria-level="2">A PLANTA PELO BRASIL</div>
+  <div class="mapa-wrap">
+    <img src="/assets/mapa-brasil.png" alt="Mapa de distribuição da mangabeira no Brasil" class="mapa-img" />
   </div>
 </section>
 
@@ -305,9 +140,8 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 5 — ATENÇÃO
      ════════════════════════════════════════════════ -->
-<section class="atencao-section">
+<section class="atencao-section" id="atencao">
   <div class="atencao-card" role="alert">
-    <div class="atencao-icon" aria-hidden="true">⚠️</div>
     <div class="atencao-content">
       <p class="atencao-title">Atenção</p>
       <p class="atencao-text">Está desaparecendo com o avanço das cidades. Encontrar uma em um parque urbano é cada vez mais raro.</p>
@@ -319,18 +153,17 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 6 — AUDIODESCRIÇÃO
      ════════════════════════════════════════════════ -->
-<section class="audio-section">
-  <div class="audio-header" role="heading" aria-level="2">Audiodescrição</div>
-  <div class="audio-card" id="audio-card" role="button" tabindex="0" aria-label="Reproduzir audiodescrição completa da mangabeira">
-    <div class="audio-play-btn" id="audio-play-btn" aria-hidden="true">
-      <span id="audio-icon">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </span>
+<section class="audio-section" id="audiodescricao">
+  <div class="audio-header" role="heading" aria-level="2">AUDIODESCRIÇÃO</div>
+  <div class="audio-card" id="audio-player" role="button" aria-pressed="false" aria-label="Ouvir audiodescrição sobre a Mangabeira">
+    <div class="audio-play-btn" id="audio-btn-ui">
+      <svg viewBox="0 0 24 24" id="audio-icon"><path d="M8 5v14l11-7z"/></svg>
     </div>
     <div class="audio-info">
       <p class="audio-label">Ouça mais sobre a Mangabeira</p>
-      <p class="audio-sublabel">Audiodescrição completa &nbsp;~2 min</p>
+      <p class="audio-sublabel">AUDIODESCRIÇÃO COMPLETA ~2 MIN</p>
     </div>
+    <audio id="audio-source" src="assets/audio_mp3.mp3"></audio>
   </div>
 </section>
 
@@ -338,18 +171,17 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 7 — LIBRAS
      ════════════════════════════════════════════════ -->
-<section class="libras-section">
+<section class="libras-section" id="libras">
   <div class="libras-header" role="heading" aria-level="2">Libras</div>
-  <div class="libras-video-wrap">
+  <div class="libras-video-wrap" id="libras-video-trigger">
     <video
       id="libras-video"
-      preload="metadata"
-      poster="assets/libras-thumb.png"
+      poster="/assets/libras-thumb.png"
       playsinline
       controls
       aria-label="Vídeo em Libras sobre a mangabeira"
     >
-      <source src="libras_mp4.mp4" type="video/mp4" />
+      <source src="/assets/libras_mp4.mp4" type="video/mp4" />
       Seu navegador não suporta o elemento de vídeo.
     </video>
     <div class="libras-play-overlay" id="libras-overlay" aria-hidden="true">
@@ -364,7 +196,7 @@
 <!-- ════════════════════════════════════════════════
      SEÇÃO 8 — CONHEÇA MAIS
      ════════════════════════════════════════════════ -->
-<section class="conheca-section">
+<section class="conheca-section" id="conheca-mais">
   <div class="conheca-header" role="heading" aria-level="2">Conheça Mais</div>
   <div class="conheca-card">
     <p>
@@ -392,16 +224,23 @@
 <!-- ════════════════════════════════════════════════
      RODAPÉ FINAL
      ════════════════════════════════════════════════ -->
-<footer class="footer">
+<footer class="footer" id="main-footer">
   <p class="footer-greeting">Ei :)</p>
-  <p class="footer-msg-main">Não deixe de ler os outros<br><em>QR CODES PELO PARQUE!</em></p>
+  <p class="footer-msg-main">NÃO DEIXE DE LER OS OUTROS<br><em>QR CODES PELO PARQUE!</em></p>
   <p class="footer-phrase">Nós só protegemos aquilo que aprendemos a enxergar.</p>
 
-  <p class="footer-apoio-label">Apoio</p>
+  <p class="footer-apoio-label">Apoio:</p>
   <div class="footer-logos">
-    <img src="assets/logo-laboa.png" alt="Laboa — Laboratório de Botânica Aplicada" />
-    <img src="assets/logo-uemg.png"  alt="UEMG Unidade Ibirité" />
-    <img src="assets/logo-fapemig.png" alt="FAPEMIG" />
+    <div class="logo-item laboa" id="logo-laboa">
+      <img src="/assets/logo-laboa.png" alt="Laboratório de Botânica Aplicada" />
+      <span>Laboratório de Botânica Aplicada</span>
+    </div>
+    <div class="logo-item uemg" id="logo-uemg">
+      <img src="/assets/logo-uemg.png" alt="UEMG Unidade Ibirité" />
+    </div>
+    <div class="logo-item fapemig" id="logo-fapemig">
+      <img src="/assets/logo-fapemig.png" alt="FAPEMIG" />
+    </div>
   </div>
 </footer>
 
