@@ -1,0 +1,35 @@
+═══════════════════════════════════════════════
+  MANGABEIRA — Site Interativo
+  Instruções de Deploy
+═══════════════════════════════════════════════
+
+ARQUIVOS QUE VOCÊ PRECISA ADICIONAR À PASTA RAIZ:
+  ➜  fruto-mangaba.glb   →  arquivo 3D do fruto (coloque na raiz, ao lado do index.html)
+  ➜  libras_mp4.mp4      →  vídeo em Libras    (coloque na raiz, ao lado do index.html)
+
+ESTRUTURA FINAL DA PASTA:
+  mangabeira/
+  ├── index.html
+  ├── style.css
+  ├── script.js
+  ├── fruto-mangaba.glb       ← VOCÊ ADICIONA
+  ├── libras_mp4.mp4          ← VOCÊ ADICIONA
+  └── assets/
+      ├── plant.png
+      ├── logo-laboa.png
+      ├── logo-uemg.png
+      ├── logo-fapemig.png
+      └── libras-thumb.png
+
+DEPLOY NO VERCEL:
+  1. Faça upload de toda a pasta
+  2. Ou arraste no vercel.com/new
+  3. Não precisa de build — site estático puro
+
+FUNCIONALIDADES:
+  ✓ Realidade Aumentada (fruto-mangaba.glb)
+  ✓ Audiodescrição via Web Speech API (português)
+  ✓ Vídeo Libras com play manual
+  ✓ Interações táteis nas caixas
+  ✓ 100% mobile-first
+═══════════════════════════════════════════════
